@@ -11,7 +11,8 @@ var xo = ["X", "O", ""],
 		c2D = document.getElementById("c2"),
 		c3D = document.getElementById("c3"),
 		turnCounter = 1,
-		cellVars = [a1D, a2D, a3D, b1D, b2D, b3D, c1D, c2D, c3D];
+		cellVars = [a1D, a2D, a3D, b1D, b2D, b3D, c1D, c2D, c3D],
+		player1 = "";
 
 // Switch to next player
 switchTurn = function() {
@@ -21,6 +22,8 @@ switchTurn = function() {
 			turn = "O";
 		}
 }
+
+
 
 
 
@@ -39,7 +42,6 @@ document.getElementById("a1").onclick = function() {
 document.getElementById("a2").onclick = function() {
 	turnCounter++;
 	switchTurn();
-	console.log(turnCounter);
 		if (a2D.innerHTML === "" && turn === "X") {
 	a2D.innerHTML = xo[0];
 		} else if (a2D.innerHTML === "" && turn === "O") {
@@ -51,7 +53,6 @@ document.getElementById("a2").onclick = function() {
 document.getElementById("a3").onclick = function() {
 	turnCounter++;
 	switchTurn();
-	console.log(turnCounter);
 		if (a3D.innerHTML === "" && turn === "X") {
 	a3D.innerHTML = xo[0];
 		} else if (a3D.innerHTML === "" && turn === "O") {
@@ -63,7 +64,6 @@ document.getElementById("a3").onclick = function() {
 document.getElementById("b1").onclick = function() {
 	turnCounter++;
 	switchTurn();
-	console.log(turnCounter);
 		if (b1D.innerHTML === "" && turn === "X") {
 	b1D.innerHTML = xo[0];
 		} else if (b1D.innerHTML === "" && turn === "O") {
@@ -75,7 +75,6 @@ document.getElementById("b1").onclick = function() {
 document.getElementById("b2").onclick = function() {
 	turnCounter++;
 	switchTurn();
-	console.log(turnCounter);
 		if (b2D.innerHTML === "" && turn === "X") {
 	b2D.innerHTML = xo[0];
 		} else if (b2D.innerHTML === "" && turn === "O") {
@@ -87,7 +86,6 @@ document.getElementById("b2").onclick = function() {
 document.getElementById("b3").onclick = function() {
 	turnCounter++;
 	switchTurn();
-	console.log(turnCounter);
 		if (b3D.innerHTML === "" && turn === "X") {
 	b3D.innerHTML = xo[0];
 		} else if (b3D.innerHTML === "" && turn === "O") {
@@ -99,7 +97,6 @@ document.getElementById("b3").onclick = function() {
 document.getElementById("c1").onclick = function() {
 	turnCounter++;
 	switchTurn();
-	console.log(turnCounter);
 		if (c1D.innerHTML === "" && turn === "X") {
 	c1D.innerHTML = xo[0];
 		} else if (c1D.innerHTML === "" && turn === "O") {
@@ -111,7 +108,6 @@ document.getElementById("c1").onclick = function() {
 document.getElementById("c2").onclick = function() {
 	turnCounter++;
 	switchTurn();
-	console.log(turnCounter);
 		if (c2D.innerHTML === "" && turn === "X") {
 	c2D.innerHTML = xo[0];
 		} else if (c2D.innerHTML === "" && turn === "O") {
@@ -123,7 +119,6 @@ document.getElementById("c2").onclick = function() {
 document.getElementById("c3").onclick = function() {
 	turnCounter++;
 	switchTurn();
-	console.log(turnCounter);
 		if (c3D.innerHTML === "" && turn === "X") {
 	c3D.innerHTML = xo[0];
 		} else if (c3D.innerHTML === "" && turn === "O") {
@@ -137,22 +132,3 @@ document.getElementById("reset").onclick = function() {
 		cellVars[i].innerHTML = xo[2];
 	}
 }
-
-
-
-// // Test loop
-
-// // Assign Square Clicks
-// var cellIds = ["a1", "a2", "a3", "b1", "b2", "b3", "c1", "c2", "c3"];
-// for (var i=0, length = cellIds.length; i<length-1; i++) {
-// 	document.getElementById(cellIds[i]).onclick = function() {
-// 		turnCounter++;
-// 		switchTurn();
-// 		console.log(turnCounter);
-// 			if (cellVars[i].innerHTML === "" && turn === "X") {
-// 		cellVars[i].innerHTML = xo[0];
-// 			} else if (cellVars[i].innerHTML === "" && turn === "O") {
-// 					cellVars[i].innerHTML = xo[1];
-// 			}
-// 	}
-// }
