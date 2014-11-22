@@ -1,0 +1,56 @@
+body {
+	margin-top: 75px;
+  font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
+  font-weight: 300;
+}
+#wrapper {
+	border: 10px solid grey;
+	margin: 0 auto;
+	display: table;
+	font-size: 80px;
+	text-align: center;
+}
+/* First Row*/
+.rowA {
+	border: 1px solid #000;
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+
+/* Second Row*/
+#rowB {
+	clear: left;;
+}
+.rowB {
+	border: 1px solid #000;
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+
+/* Third Row*/
+#rowC {
+	clear: left;
+}
+
+.rowC {
+	border: 1px solid #000;
+	float: left;
+	width: 100px;
+	height: 100px;
+}
+
+/* Reset Button */
+#button {
+	clear: left;
+	background: #2d2d2d;
+	border: 1px solid #000;
+}
+#reset {
+	border: none;
+	background: none;
+	color: #fff;
+	padding: 18px 73px;
+	font-size: 60px;
+}
