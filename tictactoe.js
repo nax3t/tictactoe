@@ -11,12 +11,13 @@ var xo = ["X", "O", ""],
 		c2D = document.getElementById("c2"),
 		c3D = document.getElementById("c3"),
 		turnCounter = 0,
+		nineClick = 0,
 		cellVars = [a1D, a2D, a3D, b1D, b2D, b3D, c1D, c2D, c3D];
 
 // Switch to next player
 switchTurn = function() {
 	turnCounter = turnCounter ^ 1;
-	if (turnCounter % 2 === 0) {
+	if (turnCounter === 0) {
 		turn = "X";
 	} else {
 			turn = "O";
@@ -26,100 +27,144 @@ switchTurn = function() {
 // A - First Square Click
 document.getElementById("a1").onclick = function() {
 	switchTurn();
-		if (a1D.innerHTML === "" && turn === "X") {
-	a1D.innerHTML = xo[0];
-		} else if (a1D.innerHTML === "" && turn === "O") {
-				a1D.innerHTML = xo[1];
-		}
+	if (a1D.innerHTML === "" && turn === "X") {
+		a1D.innerHTML = xo[0];
+	} else if (a1D.innerHTML === "" && turn === "O") {
+		a1D.innerHTML = xo[1];
+	} else if (a1D.innerHTML === "X" || a1D.innerHTML === "O") {
+		alert("This box already taken!");
+		switchTurn();
+		nineClick--;
+	}
 	checkWinner();
+	nineClick++;
 }
 
 // A - Second Square Click
 document.getElementById("a2").onclick = function() {
 	switchTurn();
-		if (a2D.innerHTML === "" && turn === "X") {
-	a2D.innerHTML = xo[0];
-		} else if (a2D.innerHTML === "" && turn === "O") {
-				a2D.innerHTML = xo[1];
-		}
+	if (a2D.innerHTML === "" && turn === "X") {
+		a2D.innerHTML = xo[0];
+	} else if (a2D.innerHTML === "" && turn === "O") {
+		a2D.innerHTML = xo[1];
+	} else if (a2D.innerHTML === "X" || a2D.innerHTML === "O") {
+		alert("This box already taken!");
+		switchTurn();
+		nineClick--;
+	}
 	checkWinner();
+	nineClick++;
 }
 
 // A - Third Square Click
 document.getElementById("a3").onclick = function() {
 	switchTurn();
-		if (a3D.innerHTML === "" && turn === "X") {
-	a3D.innerHTML = xo[0];
-		} else if (a3D.innerHTML === "" && turn === "O") {
-				a3D.innerHTML = xo[1];
-		}
+	if (a3D.innerHTML === "" && turn === "X") {
+		a3D.innerHTML = xo[0];
+	} else if (a3D.innerHTML === "" && turn === "O") {
+		a3D.innerHTML = xo[1];
+	} else if (a3D.innerHTML === "X" || a3D.innerHTML === "O") {
+		alert("This box already taken!");
+		switchTurn();
+		nineClick--;
+	}
 	checkWinner();
+	nineClick++;
 }
 
 // B - First Square Click
 document.getElementById("b1").onclick = function() {
 	switchTurn();
-		if (b1D.innerHTML === "" && turn === "X") {
-	b1D.innerHTML = xo[0];
-		} else if (b1D.innerHTML === "" && turn === "O") {
-				b1D.innerHTML = xo[1];
-		}
+	if (b1D.innerHTML === "" && turn === "X") {
+		b1D.innerHTML = xo[0];
+	} else if (b1D.innerHTML === "" && turn === "O") {
+		b1D.innerHTML = xo[1];
+	} else if (b1D.innerHTML === "X" || b1D.innerHTML === "O") {
+		alert("This box already taken!");
+		switchTurn();
+		nineClick--;
+	}
 	checkWinner();
+	nineClick++;
 }
 
 // B - Second Square Click
 document.getElementById("b2").onclick = function() {
 	switchTurn();
-		if (b2D.innerHTML === "" && turn === "X") {
-	b2D.innerHTML = xo[0];
-		} else if (b2D.innerHTML === "" && turn === "O") {
-				b2D.innerHTML = xo[1];
-		}
+	if (b2D.innerHTML === "" && turn === "X") {
+		b2D.innerHTML = xo[0];
+	} else if (b2D.innerHTML === "" && turn === "O") {
+		b2D.innerHTML = xo[1];
+	} else if (b2D.innerHTML === "X" || b2D.innerHTML === "O") {
+		alert("This box already taken!");
+		switchTurn();
+		nineClick--;
+	}
 	checkWinner();
+	nineClick++;
 }
 
 // B - Third Square Click
 document.getElementById("b3").onclick = function() {
 	switchTurn();
-		if (b3D.innerHTML === "" && turn === "X") {
-	b3D.innerHTML = xo[0];
-		} else if (b3D.innerHTML === "" && turn === "O") {
-				b3D.innerHTML = xo[1];
-		}
+	if (b3D.innerHTML === "" && turn === "X") {
+		b3D.innerHTML = xo[0];
+	} else if (b3D.innerHTML === "" && turn === "O") {
+		b3D.innerHTML = xo[1];
+	} else if (b3D.innerHTML === "X" || b3D.innerHTML === "O") {
+		alert("This box already taken!");
+		switchTurn();
+		nineClick--;
+	}
 	checkWinner();
+	nineClick++;
 }
 
 // c - First Square Click
 document.getElementById("c1").onclick = function() {
 	switchTurn();
-		if (c1D.innerHTML === "" && turn === "X") {
-	c1D.innerHTML = xo[0];
-		} else if (c1D.innerHTML === "" && turn === "O") {
-				c1D.innerHTML = xo[1];
-		}
+	if (c1D.innerHTML === "" && turn === "X") {
+		c1D.innerHTML = xo[0];
+	} else if (c1D.innerHTML === "" && turn === "O") {
+		c1D.innerHTML = xo[1];
+	} else if (c1D.innerHTML === "X" || c1D.innerHTML === "O") {
+		alert("This box already taken!");
+		switchTurn();
+	}
 	checkWinner();
+	nineClick++;
 }
 
 // C - Second Square Click
 document.getElementById("c2").onclick = function() {
 	switchTurn();
-		if (c2D.innerHTML === "" && turn === "X") {
-	c2D.innerHTML = xo[0];
-		} else if (c2D.innerHTML === "" && turn === "O") {
-				c2D.innerHTML = xo[1];
-		}
+	if (c2D.innerHTML === "" && turn === "X") {
+		c2D.innerHTML = xo[0];
+	} else if (c2D.innerHTML === "" && turn === "O") {
+		c2D.innerHTML = xo[1];
+	} else if (c2D.innerHTML === "X" || c2D.innerHTML === "O") {
+		alert("This box already taken!");
+		switchTurn();
+		nineClick--;
+	}
 	checkWinner();
+	nineClick++;
 }
 
 // C - Third Square Click
 document.getElementById("c3").onclick = function() {
 	switchTurn();
-		if (c3D.innerHTML === "" && turn === "X") {
-	c3D.innerHTML = xo[0];
-		} else if (c3D.innerHTML === "" && turn === "O") {
-				c3D.innerHTML = xo[1];
-		}
+	if (c3D.innerHTML === "" && turn === "X") {
+		c3D.innerHTML = xo[0];
+	} else if (c3D.innerHTML === "" && turn === "O") {
+		c3D.innerHTML = xo[1];
+	} else if (c3D.innerHTML === "X" || c3D.innerHTML === "O") {
+		alert("This box already taken!");
+		switchTurn();
+		nineClick--;
+	}
 	checkWinner();
+	nineClick++;
 }
 
 // Reset Button Click
@@ -127,6 +172,7 @@ var resetFunction = function() {
 	for (i=0; i<=8; i++) {
 			cellVars[i].innerHTML = xo[2];
 	}
+	nineClick = 0;
 }
 
 document.getElementById("reset").onclick = function() {
@@ -135,6 +181,8 @@ document.getElementById("reset").onclick = function() {
 
 // Check for winner
 var checkWinner = function() {
+	var xWin;
+	var oWin;
 	if (a1D.innerHTML === "X" && a1D.innerHTML === a2D.innerHTML && a2D.innerHTML === a3D.innerHTML || 
 		b1D.innerHTML === "X" && b1D.innerHTML === b2D.innerHTML && b2D.innerHTML === b3D.innerHTML ||
 		c1D.innerHTML === "X" && c1D.innerHTML === c2D.innerHTML && c2D.innerHTML === c3D.innerHTML ||
@@ -143,8 +191,9 @@ var checkWinner = function() {
 		a3D.innerHTML === "X" && a3D.innerHTML === b3D.innerHTML && b3D.innerHTML === c3D.innerHTML ||
 		a1D.innerHTML === "X" && a1D.innerHTML === b2D.innerHTML && b2D.innerHTML === c3D.innerHTML ||
 		a3D.innerHTML === "X" && a3D.innerHTML === b2D.innerHTML && b2D.innerHTML === c1D.innerHTML) {	
-		alert("Player 'X' is the winner!");
-		resetFunction();
+			xWin = "Player 'X' is the winner!"
+			alert(xWin);
+			resetFunction();
 	} else if (a1D.innerHTML === "O" && a1D.innerHTML === a2D.innerHTML && a2D.innerHTML === a3D.innerHTML || 
 		b1D.innerHTML === "O" && b1D.innerHTML === b2D.innerHTML && b2D.innerHTML === b3D.innerHTML ||
 		c1D.innerHTML === "O" && c1D.innerHTML === c2D.innerHTML && c2D.innerHTML === c3D.innerHTML ||
@@ -153,7 +202,11 @@ var checkWinner = function() {
 		a3D.innerHTML === "O" && a3D.innerHTML === b3D.innerHTML && b3D.innerHTML === c3D.innerHTML ||
 		a1D.innerHTML === "O" && a1D.innerHTML === b2D.innerHTML && b2D.innerHTML === c3D.innerHTML ||
 		a3D.innerHTML === "O" && a3D.innerHTML === b2D.innerHTML && b2D.innerHTML === c1D.innerHTML) {	
-		alert("Player 'O' is the winner!");
-		resetFunction();
+			oWin = "Player 'O' is the winner!"
+			alert(oWin);
+			resetFunction();
+	} else if (nineClick === 9 && xWin !== "Player 'X' is the winner!" && oWin !== "Player 'O' is the winner!") {
+			alert("Draw!");
+			resetFunction();
 	}
 };
